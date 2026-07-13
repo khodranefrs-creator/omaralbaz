@@ -32,7 +32,7 @@ export function WhyChooseUsTeaser({ dict, locale }: WhyChooseUsTeaserProps) {
           {reasons.map((reason) => (
             <div key={reason.num} className="group">
               <div className="flex items-start gap-6">
-                <span className="flex-shrink-0 w-12 h-12 flex items-center justify-center border-2 border-gold-400 text-gold-600 font-heading-en text-base font-bold transition-smooth group-hover:bg-gold-500 group-hover:text-navy-950 group-hover:border-gold-500">
+                <span className="flex-shrink-0 w-12 h-12 flex items-center justify-center border-2 border-gold-600 text-gold-700 font-heading-en text-base font-bold transition-smooth group-hover:bg-gold-500 group-hover:text-navy-950 group-hover:border-gold-500">
                   {reason.num}
                 </span>
                 <div>
@@ -51,10 +51,10 @@ export function WhyChooseUsTeaser({ dict, locale }: WhyChooseUsTeaserProps) {
         <div className="mt-16 text-center">
           <Link
             href={`/${locale}/why-choose-us`}
-            className="inline-flex items-center gap-2 text-gold-600 font-medium hover:text-gold-500 transition-smooth link-underline"
+            className="inline-flex items-center gap-2 text-gold-700 font-medium hover:text-gold-600 transition-smooth link-underline"
           >
             <span>{dict.whyChooseUs.methodTitle}</span>
-            <span className="rtl:rotate-180 transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
+            <span className="rtl:rotate-180 transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">&#8594;</span>
           </Link>
         </div>
       </Container>

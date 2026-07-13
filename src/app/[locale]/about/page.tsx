@@ -108,7 +108,7 @@ export default async function AboutPage({
             {values.map((value, index) => (
               <div
                 key={index}
-                className="border-t-2 border-t-gold-400 bg-white border border-warm-200 p-8"
+                className="border-t-2 border-t-gold-600 bg-white border border-warm-200 p-8"
               >
                 <h4 className="font-heading-ar text-xl font-semibold text-navy-900 mb-3">
                   {value.title}

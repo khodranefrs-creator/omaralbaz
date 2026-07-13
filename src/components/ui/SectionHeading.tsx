@@ -39,7 +39,7 @@ export default function SectionHeading({
           className={clsx(
             "mt-6 text-lg max-w-2xl leading-relaxed",
             align === "center" && "mx-auto",
-            light ? "text-warm-300" : "text-warm-500"
+            light ? "text-warm-300" : "text-warm-600"
           )}
         >
           {subtitle}

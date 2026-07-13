@@ -22,7 +22,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary:
     "bg-navy-900 text-white hover:bg-navy-800 active:bg-navy-700 focus-visible:ring-2 focus-visible:ring-navy-400 focus-visible:ring-offset-2 shadow-sm hover:shadow-md active:shadow-none",
   outline:
-    "border border-gold-400 text-gold-600 hover:bg-gold-50 active:bg-gold-100 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2",
+    "border border-gold-600 text-gold-700 hover:bg-gold-50 active:bg-gold-100 focus-visible:ring-2 focus-visible:ring-gold-600 focus-visible:ring-offset-2",
   ghost:
     "text-warm-700 hover:text-gold-600 active:text-gold-700 hover:bg-warm-50",
 };

@@ -93,7 +93,7 @@ export default async function ContactPage({
                     </p>
                     <a
                       href={`tel:${CONTACT.phone}`}
-                      className="text-warm-800 hover:text-gold-600 transition-smooth"
+                      className="text-warm-800 hover:text-gold-700 transition-smooth"
                       dir="ltr"
                     >
                       {CONTACT.phone}
@@ -106,7 +106,7 @@ export default async function ContactPage({
                     </p>
                     <a
                       href={`mailto:${CONTACT.email}`}
-                      className="text-warm-800 hover:text-gold-600 transition-smooth break-all"
+                      className="text-warm-800 hover:text-gold-700 transition-smooth break-all"
                     >
                       {CONTACT.email}
                     </a>
@@ -137,7 +137,7 @@ export default async function ContactPage({
                     href={SOCIAL.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-400 hover:text-gold-600 transition-smooth"
+                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-600 hover:text-gold-700 transition-smooth"
                   >
                     Instagram
                   </a>
@@ -145,7 +145,7 @@ export default async function ContactPage({
                     href={SOCIAL.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-400 hover:text-gold-600 transition-smooth"
+                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-600 hover:text-gold-700 transition-smooth"
                   >
                     Facebook
                   </a>
@@ -153,7 +153,7 @@ export default async function ContactPage({
                     href={SOCIAL.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-400 hover:text-gold-600 transition-smooth"
+                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-600 hover:text-gold-700 transition-smooth"
                   >
                     X (Twitter)
                   </a>
@@ -161,7 +161,7 @@ export default async function ContactPage({
                     href={SOCIAL.googleBusiness}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-400 hover:text-gold-600 transition-smooth"
+                    className="inline-flex items-center gap-2 border border-warm-200 px-4 py-2.5 text-sm text-warm-700 hover:border-gold-600 hover:text-gold-700 transition-smooth"
                   >
                     Google Business
                   </a>

@@ -57,12 +57,12 @@ export default function ArticleCard({
           )}
           <span
             className={clsx(
-              "inline-flex items-center gap-1 text-sm font-medium text-gold-600",
-              "group-hover:text-gold-500 transition-smooth duration-200",
+              "inline-flex items-center gap-1 text-sm font-medium text-gold-700",
+              "group-hover:text-gold-600 transition-smooth duration-200",
               !author && "ms-auto"
             )}
           >
-            <span className="rtl:rotate-180 transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
+            <span className="rtl:rotate-180 transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">&#8594;</span>
           </span>
         </div>
       </div>

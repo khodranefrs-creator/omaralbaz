@@ -27,7 +27,7 @@ export default function ServiceCard({
       )}
     >
       {/* Gold top accent — thin, expands on hover */}
-      <div className="absolute top-0 left-0 w-16 h-[2px] bg-gold-500 group-hover:w-full transition-all duration-300" />
+      <div className="absolute top-0 start-0 w-16 h-[2px] bg-gold-500 group-hover:w-full transition-all duration-300" />
 
       {/* Gold bottom accent — subtle */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-400/0 to-transparent group-hover:via-gold-400/30 transition-all duration-300" />
@@ -46,7 +46,7 @@ export default function ServiceCard({
         {description}
       </p>
 
-      <span className="inline-flex items-center gap-2 text-sm font-medium text-gold-600 group-hover:text-gold-500 transition-smooth">
+      <span className="inline-flex items-center gap-2 text-sm font-medium text-gold-700 group-hover:text-gold-600 transition-smooth">
         <span className="link-underline">
           <span className="rtl:rotate-180 inline-block">&#8594;</span>
         </span>

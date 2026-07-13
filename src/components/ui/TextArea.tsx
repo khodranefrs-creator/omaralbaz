@@ -26,7 +26,7 @@ export default function TextArea({
         className="block text-sm font-medium text-navy-800 mb-2"
       >
         {label}
-        {required && <span className="text-gold-500 me-1">*</span>}
+        {required && <span className="text-gold-700 me-1">*</span>}
       </label>
       <textarea
         id={id}
@@ -40,7 +40,7 @@ export default function TextArea({
           "transition-smooth outline-none",
           error
             ? "border-red-400 focus:border-red-500 focus:ring-1 focus:ring-red-400"
-            : "border-warm-300 focus:border-gold-400 focus:ring-1 focus:ring-gold-400"
+            : "border-warm-300 focus:border-gold-600 focus:ring-1 focus:ring-gold-600"
         )}
       />
       {error && (

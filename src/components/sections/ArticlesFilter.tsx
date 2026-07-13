@@ -39,8 +39,8 @@ export default function ArticlesFilter({
               onClick={() => setActiveFilter(key)}
               className={`px-5 py-2.5 text-sm font-medium rounded-sm transition-smooth ${
                 activeFilter === key
-                  ? "bg-gold-400 text-white"
-                  : "bg-white text-warm-700 border border-warm-200 hover:border-gold-400 hover:text-gold-600"
+                  ? "bg-gold-500 text-white"
+                  : "bg-white text-warm-700 border border-warm-200 hover:border-gold-600 hover:text-gold-700"
               }`}
             >
               {dict.articles[key]}

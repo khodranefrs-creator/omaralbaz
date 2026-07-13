@@ -42,7 +42,7 @@ export function LatestArticles({ dict, locale, articles }: LatestArticlesProps) 
         <div className="mt-12 text-center">
           <Link
             href={`/${locale}/articles`}
-            className="inline-flex items-center gap-2 text-gold-600 font-medium hover:text-gold-500 transition-smooth"
+            className="inline-flex items-center gap-2 text-gold-700 font-medium hover:text-gold-600 transition-smooth"
           >
             <span>{dict.home.articlesTitle}</span>
             <span className="rtl:rotate-180">&#8594;</span>

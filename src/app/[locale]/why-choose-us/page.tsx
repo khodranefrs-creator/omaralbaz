@@ -71,9 +71,9 @@ export default async function WhyChooseUsPage({
             {reasons.map((reason) => (
               <div
                 key={reason.num}
-                className="border border-warm-200 p-8 hover:border-gold-400 transition-colors"
+                className="border border-warm-200 p-8 hover:border-gold-600 transition-colors"
               >
-                <span className="text-gold-400 font-heading-en text-sm font-semibold tracking-wider">
+                <span className="text-gold-700 font-heading-en text-sm font-semibold tracking-wider">
                   {reason.num}
                 </span>
                 <h3 className="font-heading-ar text-xl font-semibold text-navy-900 mt-3 mb-3">
