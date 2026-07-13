@@ -1,47 +1,51 @@
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
-import GoldDivider from "@/components/ui/GoldDivider";
-import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 interface HeroProps {
   dict: Dictionary;
   locale: Locale;
 }
 
-export default function Hero({ dict, locale }: HeroProps) {
+export function Hero({ dict, locale }: HeroProps) {
   return (
-    <section className="bg-white py-20 md:py-28">
-      <GoldDivider />
+    <section className="relative bg-navy-950 overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(20,60,90,0.6)_0%,transparent_60%)]" />
 
-      <Container>
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mt-10 mb-6 text-sm font-semibold uppercase tracking-widest text-gold-600">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 lg:py-48">
+        <div className="max-w-3xl">
+          <p className="text-gold-400 font-medium tracking-wide text-sm uppercase mb-6">
             {dict.hero.tagline}
           </p>
 
-          <h1 className="font-heading-ar text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-navy-900">
-            {dict.meta.title}
+          <h1 className="font-heading-ar text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+            {dict.hero.headline}
           </h1>
 
-          <p className="mt-8 text-lg md:text-xl leading-relaxed text-warm-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-warm-300 leading-relaxed mb-12 max-w-2xl">
             {dict.hero.subtitle}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button variant="primary" size="lg" href={`/${locale}/contact`}>
+          <div className="flex flex-col sm:flex-row gap-4 mb-6">
+            <Link
+              href={`/${locale}/contact`}
+              className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 font-semibold hover:bg-gold-400 transition-smooth text-lg"
+            >
               {dict.hero.cta}
-            </Button>
-            <Button variant="outline" size="lg" href={`/${locale}/services`}>
+            </Link>
+            <Link
+              href={`/${locale}/services`}
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-warm-400/30 text-white font-semibold hover:border-gold-400 hover:text-gold-400 transition-smooth text-lg"
+            >
               {dict.hero.ctaSecondary}
-            </Button>
+            </Link>
           </div>
-        </div>
-      </Container>
 
-      <div className="mt-20">
-        <GoldDivider />
+          <p className="text-warm-400 text-sm">{dict.hero.trustMicro}</p>
+        </div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent" />
     </section>
   );
 }

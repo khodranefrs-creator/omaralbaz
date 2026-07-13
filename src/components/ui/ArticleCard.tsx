@@ -9,6 +9,7 @@ interface ArticleCardProps {
   date: string;
   slug: string;
   locale: Locale;
+  author?: string;
 }
 
 export default function ArticleCard({
@@ -18,42 +19,52 @@ export default function ArticleCard({
   date,
   slug,
   locale,
+  author,
 }: ArticleCardProps) {
   return (
     <Link
       href={`/${locale}/articles/${slug}`}
       className={clsx(
-        "group block border border-warm-200 bg-white p-8",
+        "group block border border-warm-200 bg-white overflow-hidden",
         "hover:border-gold-400 hover:shadow-lg transition-smooth"
       )}
     >
-      <span
-        className={clsx(
-          "inline-block mb-4 px-3 py-1 text-xs font-medium rounded-sm",
-          "bg-gold-50 text-gold-700"
-        )}
-      >
-        {category}
-      </span>
+      <div className="p-8">
+        <div className="flex items-center gap-3 mb-4">
+          <span
+            className={clsx(
+              "inline-block px-3 py-1 text-xs font-medium rounded-sm",
+              "bg-gold-50 text-gold-700"
+            )}
+          >
+            {category}
+          </span>
+          <span className="w-px h-3 bg-warm-300" />
+          <time className="text-xs text-warm-500">{date}</time>
+        </div>
 
-      <h3 className="font-heading-ar text-xl font-semibold text-navy-900 mb-3 leading-snug">
-        {title}
-      </h3>
+        <h3 className="font-heading-ar text-xl font-semibold text-navy-900 mb-3 leading-snug group-hover:text-gold-700 transition-smooth">
+          {title}
+        </h3>
 
-      <p className="text-warm-600 leading-relaxed mb-6 line-clamp-3">
-        {excerpt}
-      </p>
+        <p className="text-warm-600 leading-relaxed mb-6 line-clamp-3 text-sm">
+          {excerpt}
+        </p>
 
-      <div className="flex items-center justify-between pt-4 border-t border-warm-100">
-        <time className="text-sm text-warm-500">{date}</time>
-        <span
-          className={clsx(
-            "inline-flex items-center gap-1 text-sm font-medium text-gold-600",
-            "group-hover:text-gold-500 transition-smooth"
+        <div className="flex items-center justify-between pt-4 border-t border-warm-100">
+          {author && (
+            <span className="text-xs text-warm-500 italic">{author}</span>
           )}
-        >
-          <span className="rtl:rotate-180">&#8594;</span>
-        </span>
+          <span
+            className={clsx(
+              "inline-flex items-center gap-1 text-sm font-medium text-gold-600",
+              "group-hover:text-gold-500 transition-smooth",
+              !author && "ms-auto"
+            )}
+          >
+            <span className="rtl:rotate-180">&#8594;</span>
+          </span>
+        </div>
       </div>
     </Link>
   );

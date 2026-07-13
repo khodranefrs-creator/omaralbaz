@@ -15,9 +15,11 @@
   },
   "hero": {
     "tagline": "Legal Expertise — Clear Vision — Consistent Results",
+    "headline": "Your Trusted Legal Partner for Corporations & Investors in Saudi Arabia",
     "subtitle": "We deliver comprehensive legal solutions for corporations, investors, and individuals in the Kingdom of Saudi Arabia, with international standards and unwavering confidence.",
     "cta": "Book a Consultation",
-    "ctaSecondary": "Explore Our Services"
+    "ctaSecondary": "Explore Our Services",
+    "trustMicro": "Confidential consultations available 7 days a week."
   },
   "trustBar": {
     "experience": "Years of Experience",
@@ -28,6 +30,22 @@
     "casesValue": "+500",
     "industriesValue": "+20",
     "satisfactionValue": "99%"
+  },
+  "whoWeServe": {
+    "title": "Who We Serve",
+    "subtitle": "Trusted legal counsel for Saudi Arabia's most demanding sectors.",
+    "corporations": {
+      "title": "Corporations & Enterprises",
+      "desc": "End-to-end legal support from incorporation to compliance, governance, and M&A — protecting your business at every stage."
+    },
+    "investors": {
+      "title": "Investors & Entrepreneurs",
+      "desc": "Strategic legal guidance for market entry, investment structuring, risk assessment, and regulatory navigation in KSA."
+    },
+    "individuals": {
+      "title": "Individuals & Families",
+      "desc": "Personalised legal services for employment, family matters, real estate, and civil disputes — with discretion and care."
+    }
   },
   "home": {
     "servicesTitle": "Our Legal Services",
@@ -66,6 +84,8 @@
     "subtitle": "Comprehensive legal solutions tailored to meet your needs",
     "overview": "We offer an integrated range of legal services covering all legal aspects our clients may require. Whether you are looking for litigation representation, legal consultancy, or contract drafting, our team is ready to serve you.",
     "cta": "Book a Consultation About This Service",
+    "allServices": "View All Services",
+    "allServicesDesc": "Explore our full range of legal services tailored to your needs.",
     "corporate": {
       "title": "Corporate Law",
       "shortDesc": "Establishing, managing, and protecting businesses with global legal standards",
@@ -156,7 +176,8 @@
     "corporate": "Corporate",
     "contracts": "Contracts",
     "consulting": "Consulting",
-    "disputes": "Disputes"
+    "disputes": "Disputes",
+    "byAuthor": "by Omar Al Baz"
   },
   "contact": {
     "title": "Contact Us",

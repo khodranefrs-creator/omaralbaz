@@ -8,7 +8,7 @@ interface CTASectionProps {
   locale: Locale;
 }
 
-export default function CTASection({ dict, locale }: CTASectionProps) {
+export function CTASection({ dict, locale }: CTASectionProps) {
   return (
     <section className="bg-navy-900 py-20">
       <Container>
