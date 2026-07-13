@@ -56,14 +56,14 @@ export function Header({ dict, locale }: HeaderProps) {
       )}
     >
       <Container>
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <Link href={`/${locale}`} className="flex-shrink-0">
             <Image
               src="/images/omarlogo.png"
               alt="Omar Al Baz Law Office & Legal Consultancy"
-              width={200}
-              height={60}
-              className="h-12 w-auto"
+              width={240}
+              height={72}
+              className="h-14 w-auto"
               priority
             />
           </Link>

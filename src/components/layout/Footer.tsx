@@ -36,9 +36,9 @@ export function Footer({ dict, locale }: FooterProps) {
               <Image
                 src="/images/omarlogo.png"
                 alt="Omar Al Baz Law Office & Legal Consultancy"
-                width={200}
-                height={60}
-                className="h-12 w-auto brightness-0 invert opacity-90"
+                width={240}
+                height={72}
+                className="h-14 w-auto brightness-0 invert opacity-90"
               />
             </Link>
             <p className="text-sm text-warm-400 leading-relaxed">
