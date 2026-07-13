@@ -1,6 +1,7 @@
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import GoldDivider from "@/components/ui/GoldDivider";
 import { CONTACT, SOCIAL, SERVICES } from "@/lib/constants";
@@ -32,14 +33,13 @@ export function Footer({ dict, locale }: FooterProps) {
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Link href={`/${locale}`} className="inline-block mb-6">
-              <span className="font-heading-ar text-xl font-bold text-white">
-                {locale === "ar" ? "مكتب عمر الباز" : "Omar Al Baz"}
-              </span>
-              <span className="block text-[10px] text-warm-400 tracking-wider uppercase mt-[-2px]">
-                {locale === "ar"
-                  ? "للمحاماة والاستشارات القانونية"
-                  : "Law Office & Legal Consultancy"}
-              </span>
+              <Image
+                src="/images/omarlogo.png"
+                alt="Omar Al Baz Law Office & Legal Consultancy"
+                width={200}
+                height={60}
+                className="h-12 w-auto brightness-0 invert opacity-90"
+              />
             </Link>
             <p className="text-sm text-warm-400 leading-relaxed">
               {dict.footer.description}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Container from "@/components/ui/Container";
@@ -57,14 +58,14 @@ export function Header({ dict, locale }: HeaderProps) {
       <Container>
         <div className="flex items-center justify-between h-20">
           <Link href={`/${locale}`} className="flex-shrink-0">
-            <span className="font-heading-ar text-xl font-bold text-navy-900">
-              {locale === "ar" ? "مكتب عمر الباز" : "Omar Al Baz"}
-            </span>
-            <span className="block text-[10px] text-warm-500 tracking-wider uppercase mt-[-2px]">
-              {locale === "ar"
-                ? "للمحاماة والاستشارات القانونية"
-                : "Law Office & Legal Consultancy"}
-            </span>
+            <Image
+              src="/images/omarlogo.png"
+              alt="Omar Al Baz Law Office & Legal Consultancy"
+              width={200}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
