@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Gold palette */
+  --color-gold-50: #faf6ed;
+  --color-gold-100: #f3ebd3;
+  --color-gold-200: #e8d9a8;
+  --color-gold-300: #d9c076;
+  --color-gold-400: #c9a96e;
+  --color-gold-500: #b8953c;
+  --color-gold-600: #a07c2e;
+  --color-gold-700: #7d5f24;
+  --color-gold-800: #5a441b;
+  --color-gold-900: #3a2c12;
+
+  /* Navy palette */
+  --color-navy-50: #f0f2f6;
+  --color-navy-100: #d8dde7;
+  --color-navy-200: #b1bad0;
+  --color-navy-300: #8a97b8;
+  --color-navy-400: #6374a1;
+  --color-navy-500: #4a5b8a;
+  --color-navy-600: #3a4870;
+  --color-navy-700: #2a3556;
+  --color-navy-800: #1a2240;
+  --color-navy-900: #0c1222;
+  --color-navy-950: #070b15;
+
+  /* Neutral palette */
+  --color-warm-50: #faf9f7;
+  --color-warm-100: #f5f4f0;
+  --color-warm-200: #edece7;
+  --color-warm-300: #e0ded8;
+  --color-warm-400: #c8c5bd;
+  --color-warm-500: #a8a59c;
+  --color-warm-600: #8a877e;
+  --color-warm-700: #6b6962;
+  --color-warm-800: #4d4b46;
+  --color-warm-900: #2e2d2a;
+  --color-warm-950: #1a1918;
+
+  /* Font families */
+  --font-heading-ar: "Noto Naskh Arabic", "Amiri", serif;
+  --font-body-ar: "Noto Sans Arabic", "Tajawal", sans-serif;
+  --font-heading-en: "Playfair Display", "Georgia", serif;
+  --font-body-en: "Inter", "system-ui", sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body-ar);
+  color: var(--color-warm-900);
+  background-color: #ffffff;
+  line-height: 1.7;
+}
+
+[dir="ltr"] body {
+  font-family: var(--font-body-en);
+}
+
+/* Typography scale */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading-ar);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+[dir="ltr"] h1,
+[dir="ltr"] h2,
+[dir="ltr"] h3,
+[dir="ltr"] h4,
+[dir="ltr"] h5,
+[dir="ltr"] h6 {
+  font-family: var(--font-heading-en);
+}
+
+/* Gold hairline dividers */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold-400),
+    transparent
+  );
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-gold-200);
+  color: var(--color-navy-900);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+
+/* Scroll reveal */
+@keyframes scrollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-warm-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-500);
+}
+
+/* RTL-specific adjustments */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="ltr"] {
+  text-align: left;
+}

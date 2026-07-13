@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "title": "Omar Al Baz Law Office & Legal Consultancy",
+    "description": "Omar Al Baz Law Office & Legal Consultancy in Riyadh — Legal expertise, clear vision, consistent results. Legal representation, consultancy, contracts, and corporate services."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Legal Services",
+    "team": "Our Team",
+    "whyChooseUs": "Why Choose Us",
+    "articles": "Articles & Insights",
+    "contact": "Contact Us",
+    "bookConsultation": "Book a Consultation"
+  },
+  "hero": {
+    "tagline": "Legal Expertise — Clear Vision — Consistent Results",
+    "subtitle": "We deliver comprehensive legal solutions for corporations, investors, and individuals in the Kingdom of Saudi Arabia, with international standards and unwavering confidence.",
+    "cta": "Book a Consultation",
+    "ctaSecondary": "Explore Our Services"
+  },
+  "trustBar": {
+    "experience": "Years of Experience",
+    "cases": "Cases & Clients",
+    "industries": "Industries Served",
+    "satisfaction": "Client Satisfaction Rate",
+    "experienceValue": "+15",
+    "casesValue": "+500",
+    "industriesValue": "+20",
+    "satisfactionValue": "99%"
+  },
+  "home": {
+    "servicesTitle": "Our Legal Services",
+    "servicesSubtitle": "A comprehensive range of legal services designed specifically to meet the needs of corporations and individuals alike.",
+    "whyTitle": "Why Choose Omar Al Baz Law Office?",
+    "whySubtitle": "We combine local expertise with international standards to deliver exceptional legal services.",
+    "articlesTitle": "Legal Articles & Insights",
+    "articlesSubtitle": "The latest legal analysis and articles to help you understand the Saudi legal landscape.",
+    "ctaTitle": "Need Legal Consultation?",
+    "ctaSubtitle": "Our team of qualified lawyers and consultants is ready to help you. Book your first consultation now.",
+    "ctaButton": "Book a Consultation"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "A Journey of Trust and Legal Excellence",
+    "storyTitle": "Our Story",
+    "storyP1": "Omar Al Baz Law Office & Legal Consultancy was founded with a clear vision: to deliver legal services of international standards in the heart of Riyadh. Since our establishment, we have dedicated ourselves to building long-term trust relationships with our clients from corporations, individuals, and investors.",
+    "storyP2": "We believe that legal excellence is measured not only by the outcomes we achieve, but by the quality of the relationships we build and the results we deliver. Every case we take on represents a commitment to our client's success.",
+    "storyP3": "Under the leadership of Mr. Omar Al Baz, our office comprises a team of lawyers and consultants with extensive experience in various branches of law, enabling us to provide integrated legal solutions that address the full spectrum of our clients' needs.",
+    "visionTitle": "Our Vision",
+    "vision": "To be the premier choice for legal representation and consultancy in the region, by delivering innovative legal solutions that achieve the highest levels of client satisfaction.",
+    "missionTitle": "Our Mission",
+    "mission": "Empowering corporations, individuals, and investors through comprehensive legal services that combine local expertise with international standards, while maintaining the highest standards of integrity, confidentiality, and professionalism.",
+    "valuesTitle": "Our Core Values",
+    "value1Title": "Integrity",
+    "value1Desc": "We are committed to the highest ethical and professional standards in all our dealings.",
+    "value2Title": "Excellence",
+    "value2Desc": "We constantly strive to deliver legal services that exceed our clients' expectations.",
+    "value3Title": "Confidentiality",
+    "value3Desc": "We protect our clients' information with the highest levels of security and privacy.",
+    "value4Title": "Trust",
+    "value4Desc": "We build long-term relationships based on mutual trust and transparency."
+  },
+  "services": {
+    "title": "Legal Services",
+    "subtitle": "Comprehensive legal solutions tailored to meet your needs",
+    "overview": "We offer an integrated range of legal services covering all legal aspects our clients may require. Whether you are looking for litigation representation, legal consultancy, or contract drafting, our team is ready to serve you.",
+    "cta": "Book a Consultation About This Service",
+    "corporate": {
+      "title": "Corporate Law",
+      "shortDesc": "Establishing, managing, and protecting businesses with global legal standards",
+      "description": "We provide comprehensive services in corporate law including incorporation, registration, daily management, and regulatory compliance. We help companies comply with all legal requirements while optimizing their legal and institutional structures.",
+      "whenTitle": "When Do You Need This Service?",
+      "whenItems": ["Establishing a new company or branch in the Kingdom of Saudi Arabia", "Structuring or reorganizing company ownership", "Meeting regulatory and legal compliance requirements", "Negotiating shareholder agreements or corporate contracts", "Mergers and acquisitions"],
+      "methodTitle": "Our Methodology",
+      "method": "We begin with a comprehensive assessment of your current legal standing, then provide detailed strategic recommendations, and execute the solution in full collaboration with you to ensure your objectives are met."
+    },
+    "contracts": {
+      "title": "Contracts & Agreements",
+      "shortDesc": "Drafting, reviewing, and auditing contracts with professional precision",
+      "description": "We specialize in drafting commercial and civil contracts and agreements that protect our clients' rights and achieve their business objectives. We review and amend existing contracts to ensure they fully cover your interests.",
+      "whenTitle": "When Do You Need This Service?",
+      "whenItems": ["Drafting new contracts (lease, sale, services, supply)", "Reviewing and auditing contracts before signing", "Renegotiating contract terms", "Partnership and business cooperation agreements", "Employment contracts and recruitment"],
+      "methodTitle": "Our Methodology",
+      "method": "We treat each contract as a strategic tool. We first understand your business priorities, then draft a contract that achieves the right balance between legal protection and commercial flexibility."
+    },
+    "consultancy": {
+      "title": "Legal Consultancy",
+      "shortDesc": "Accurate and informed legal advice for better decision-making",
+      "description": "We provide specialized legal consultancy that helps corporations and individuals make informed decisions built on solid foundations. Our team possesses deep expertise in various legal aspects of the Saudi market.",
+      "whenTitle": "When Do You Need This Service?",
+      "whenItems": ["Needing expert legal opinion on a specific matter", "Planning a new business project requiring legal guidance", "Verifying legal compliance of your current operations", "Dealing with unexpected legal challenges"],
+      "methodTitle": "Our Methodology",
+      "method": "We deliver comprehensive and detailed legal analyses with practical recommendations, ensuring every recommendation aligns with your overall objectives and business situation."
+    },
+    "dispute": {
+      "title": "Dispute Resolution",
+      "shortDesc": "Strong representation and strategic solutions for disputes and conflicts",
+      "description": "We provide strong representation in dispute resolution, whether through alternative methods or through the courts. We always strive to achieve the best outcome for our clients at the lowest possible cost.",
+      "whenTitle": "When Do You Need This Service?",
+      "whenItems": ["Commercial dispute between partners or clients", "Contractual conflicts requiring legal resolution", "Civil or commercial cases before the courts", "Arbitration in commercial disputes", "Litigation strategy and representation"],
+      "methodTitle": "Our Methodology",
+      "method": "We always begin by assessing the chances of amicable settlement before resorting to litigation. If the case requires judicial proceedings, our qualified team represents you with strength and professionalism."
+    },
+    "advisory": {
+      "title": "Business & Investor Advisory",
+      "shortDesc": "Strategic guidance for entrepreneurs and investors",
+      "description": "We provide specialized consultancy for entrepreneurs and investors, combining legal expertise with deep knowledge of the Saudi business market. We help make informed investment decisions and protect your interests.",
+      "whenTitle": "When Do You Need This Service?",
+      "whenItems": ["Planning a new investment in the Kingdom", "Evaluating the legal risks of an investment project", "Expanding into new markets", "Protecting investor rights in joint ventures", "Estate and family business planning"],
+      "methodTitle": "Our Methodology",
+      "method": "We work with you as a strategic partner, providing comprehensive risk and opportunity analyses with clear and detailed action plans."
+    }
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Legal experts committed to excellence",
+    "omar": {
+      "name": "Mr. Omar Al Baz",
+      "role": "Founder & Managing Partner",
+      "specialization": "Corporate Law & Legal Consultancy",
+      "bio": "A lawyer and legal consultant with extensive experience in corporate law, contracts, and legal consultancy. He leads the office with a strategic vision that combines local expertise with international standards."
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Omar Al Baz Law Office?",
+    "subtitle": "The factors that set us apart and make us the ideal choice for your legal needs",
+    "reason1Title": "Local Expertise, International Standards",
+    "reason1Desc": "We combine deep knowledge of local laws and regulations with international standards in delivering legal services.",
+    "reason2Title": "Specialized, Experienced Team",
+    "reason2Desc": "A team of qualified lawyers and consultants with extensive experience across various legal fields.",
+    "reason3Title": "Comprehensive Legal Solutions",
+    "reason3Desc": "We provide integrated legal solutions covering all your needs from establishment to dispute resolution.",
+    "reason4Title": "Transparency & Trust",
+    "reason4Desc": "We are committed to complete transparency in all our dealings and build relationships based on mutual trust.",
+    "reason5Title": "Speed & Efficiency",
+    "reason5Desc": "We ensure fast and efficient service delivery without compromising quality or legal precision.",
+    "reason6Title": "Continuity & Support",
+    "reason6Desc": "We provide ongoing support to our clients even after case or transaction completion, because our relationship does not end with a signed contract.",
+    "methodTitle": "Our Working Methodology",
+    "step1Title": "Understanding & Listening",
+    "step1Desc": "We always begin with effective listening to fully understand your situation and real needs.",
+    "step2Title": "Analysis & Planning",
+    "step2Desc": "We comprehensively analyze the legal situation and develop a clear, detailed action plan.",
+    "step3Title": "Execution & Follow-up",
+    "step3Desc": "We execute the plan with high efficiency with continuous follow-up and regular updates.",
+    "step4Title": "Optimization & Development",
+    "step4Desc": "We review results and continuously work to improve our strategy for the best outcomes."
+  },
+  "articles": {
+    "title": "Articles & Legal Insights",
+    "subtitle": "The latest analysis and articles to help you understand the legal landscape",
+    "readMore": "Read More",
+    "categories": "Categories",
+    "all": "All",
+    "corporate": "Corporate",
+    "contracts": "Contracts",
+    "consulting": "Consulting",
+    "disputes": "Disputes"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to help. Contact us for any inquiry or to book a consultation.",
+    "formTitle": "Send Us a Message",
+    "consultationTitle": "Legal Consultation Request",
+    "consultationSubtitle": "Complete the form below and our team will get back to you as soon as possible.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "message": "Message",
+    "caseType": "Case Type",
+    "urgency": "Priority Level",
+    "preferredContact": "Preferred Contact Method",
+    "normal": "Normal",
+    "urgent": "Urgent",
+    "veryUrgent": "Very Urgent",
+    "phoneCall": "Phone Call",
+    "emailContact": "Email",
+    "whatsapp": "WhatsApp",
+    "submit": "Submit",
+    "submitConsultation": "Submit Consultation Request",
+    "success": "Your message has been sent successfully. We will get back to you shortly.",
+    "consultationSuccess": "Your consultation request has been submitted successfully. Our team will contact you within 24 hours.",
+    "officeTitle": "Our Office",
+    "address": "Riyadh, Kingdom of Saudi Arabia",
+    "workingHours": "Working Hours",
+    "hours": "Sunday - Thursday: 9 AM - 5 PM",
+    "socialTitle": "Follow Us"
+  },
+  "footer": {
+    "description": "Omar Al Baz Law Office & Legal Consultancy — your trusted partner in legal solutions.",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact Us",
+    "copyright": "© {year} Omar Al Baz Law Office & Legal Consultancy. All rights reserved.",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "backToServices": "Back to Services",
+    "readMore": "More",
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again.",
+    "required": "Required"
+  }
+}
