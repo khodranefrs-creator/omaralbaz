@@ -8,7 +8,7 @@ import {
 import { notFound } from "next/navigation";
 import { isValidLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { SITE_URL, CONTACT } from "@/lib/constants";
+import { SITE_URL, CONTACT, SOCIAL } from "@/lib/constants";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
@@ -125,6 +125,7 @@ export default async function LocaleLayout({
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Riyadh",
+                addressRegion: "Riyadh",
                 addressCountry: "SA",
               },
               geo: {
@@ -132,6 +133,12 @@ export default async function LocaleLayout({
                 latitude: CONTACT.coordinates.lat,
                 longitude: CONTACT.coordinates.lng,
               },
+              sameAs: [
+                SOCIAL.instagram,
+                SOCIAL.facebook,
+                SOCIAL.twitter,
+                SOCIAL.googleBusiness,
+              ],
               priceRange: "$$$",
               areaServed: {
                 "@type": "Country",
