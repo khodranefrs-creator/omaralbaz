@@ -73,10 +73,10 @@ export function Header({ dict, locale }: HeaderProps) {
                     <Link
                       href={fullHref}
                       className={clsx(
-                        "px-4 py-2 text-sm font-medium transition-smooth",
+                        "px-4 py-2 text-[15px] font-semibold transition-smooth",
                         isActive
                           ? "text-gold-700 nav-active-indicator"
-                          : "text-warm-700 hover:text-gold-700"
+                          : "text-warm-900 hover:text-gold-700"
                       )}
                     >
                       {dict.nav.services}
@@ -88,7 +88,7 @@ export function Header({ dict, locale }: HeaderProps) {
                           <Link
                             key={service.key}
                             href={`/${locale}${service.href}`}
-                            className="block px-5 py-3 text-sm text-warm-700 hover:bg-gold-50 hover:text-gold-700 transition-smooth"
+                            className="block px-5 py-3 text-[15px] text-warm-800 hover:bg-gold-50 hover:text-gold-700 transition-smooth"
                           >
                             {dict.services[service.key].title}
                           </Link>
@@ -104,10 +104,10 @@ export function Header({ dict, locale }: HeaderProps) {
                   key={item.key}
                   href={fullHref}
                   className={clsx(
-                    "px-4 py-2 text-sm font-medium transition-smooth",
+                    "px-4 py-2 text-[15px] font-semibold transition-smooth",
                     isActive
                       ? "text-gold-700 nav-active-indicator"
-                      : "text-warm-700 hover:text-gold-700"
+                      : "text-warm-900 hover:text-gold-700"
                   )}
                 >
                   {dict.nav[item.key]}
@@ -126,7 +126,7 @@ export function Header({ dict, locale }: HeaderProps) {
 
             <Link
               href={switchPath}
-              className="relative flex items-center gap-1.5 px-3 py-2 border border-warm-200 text-sm font-medium text-warm-700 hover:border-gold-600 hover:text-gold-700 transition-smooth"
+              className="relative flex items-center gap-1.5 px-3 py-2 border border-warm-300 text-[13px] font-semibold text-warm-800 hover:border-gold-600 hover:text-gold-700 transition-smooth"
               title={
                 otherLocale === "ar"
                   ? "التبديل إلى العربية"
@@ -148,7 +148,7 @@ export function Header({ dict, locale }: HeaderProps) {
 
           <button
             type="button"
-            className="lg:hidden p-2 text-warm-700 hover:text-gold-700 transition-smooth"
+            className="lg:hidden p-2 text-warm-900 hover:text-gold-700 transition-smooth"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
@@ -191,10 +191,10 @@ export function Header({ dict, locale }: HeaderProps) {
                     key={item.key}
                     href={fullHref}
                     className={clsx(
-                      "block px-4 py-3 text-sm font-medium transition-smooth",
+                      "block px-4 py-3 text-[15px] font-semibold transition-smooth",
                       isActive
                         ? "text-gold-700 bg-gold-50"
-                        : "text-warm-700 hover:bg-warm-50"
+                        : "text-warm-900 hover:bg-warm-50"
                     )}
                     onClick={() => setIsOpen(false)}
                   >
@@ -214,7 +214,7 @@ export function Header({ dict, locale }: HeaderProps) {
 
                 <Link
                   href={switchPath}
-                  className="flex items-center justify-center gap-2 px-4 py-3 border border-warm-200 text-sm font-medium text-warm-700 hover:border-gold-600 hover:text-gold-700 transition-smooth"
+                  className="flex items-center justify-center gap-2 px-4 py-3 border border-warm-300 text-[15px] font-semibold text-warm-800 hover:border-gold-600 hover:text-gold-700 transition-smooth"
                   onClick={() => setIsOpen(false)}
                 >
                   <svg
