@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -34,26 +34,14 @@ const serviceLinks = [
 export function Header({ dict, locale }: HeaderProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const otherLocale: Locale = locale === "ar" ? "en" : "ar";
   const switchPath = pathname.replace(`/${locale}`, `/${otherLocale}`);
 
   return (
     <header
-      className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-smooth",
-        isScrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-sm"
-          : "bg-white"
-      )}
+      className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-smooth"
     >
       <Container>
         <div className="flex items-center justify-between h-24">
@@ -65,6 +53,7 @@ export function Header({ dict, locale }: HeaderProps) {
               height={72}
               className="h-14 w-auto"
               priority
+              fetchPriority="high"
             />
           </Link>
 

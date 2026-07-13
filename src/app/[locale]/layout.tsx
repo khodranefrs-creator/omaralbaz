@@ -23,7 +23,7 @@ const notoNaskhArabic = Noto_Naskh_Arabic({
 const notoSansArabic = Noto_Sans_Arabic({
   subsets: ["arabic"],
   variable: "--font-body-ar",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -37,7 +37,7 @@ const playfairDisplay = Playfair_Display({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body-en",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
