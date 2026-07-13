@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isValidLocale, type Locale } from "@/i18n/config";
+import { isValidLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import type { Article } from "@/types";
 import Container from "@/components/ui/Container";

@@ -1,11 +1,9 @@
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
-import Link from "next/link";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import ServiceIcon from "@/components/ui/ServiceIcon";
-import type { ReactNode } from "react";
 
 interface ServicesOverviewProps {
   dict: Dictionary;

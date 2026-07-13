@@ -1,11 +1,8 @@
 import type { Dictionary } from "@/i18n/get-dictionary";
-import type { Locale } from "@/i18n/config";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
 
 interface TrustBarProps {
   dict: Dictionary;
-  locale: Locale;
 }
 
 const items = [
@@ -15,7 +12,7 @@ const items = [
   { valueKey: "satisfactionValue", labelKey: "satisfaction" },
 ] as const;
 
-export function TrustBar({ dict, locale }: TrustBarProps) {
+export function TrustBar({ dict }: TrustBarProps) {
   return (
     <section className="bg-navy-900 py-12">
       <Container>

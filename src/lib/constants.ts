@@ -25,7 +25,7 @@ export const SOCIAL = {
 
 export const SERVICES = [
   {
-    slug: "corporate",
+    slug: "corporate-law",
     icon: "building",
   },
   {
@@ -37,7 +37,7 @@ export const SERVICES = [
     icon: "scale",
   },
   {
-    slug: "dispute",
+    slug: "dispute-resolution",
     icon: "gavel",
   },
   {

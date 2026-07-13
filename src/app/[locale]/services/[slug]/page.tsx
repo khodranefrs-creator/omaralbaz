@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isValidLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -18,16 +17,21 @@ interface ServiceData {
 }
 
 function getServiceData(dict: Awaited<ReturnType<typeof getDictionary>>, slug: string): ServiceData | undefined {
+  const slugMap: Record<string, string> = {
+    "corporate-law": "corporate",
+    "dispute-resolution": "dispute",
+  };
+  const dictKey = slugMap[slug] ?? slug;
   const services = dict.services as unknown as Record<string, ServiceData>;
-  return services[slug];
+  return services[dictKey];
 }
 
 export function generateStaticParams() {
   return [
-    { slug: "corporate" },
+    { slug: "corporate-law" },
     { slug: "contracts" },
     { slug: "consultancy" },
-    { slug: "dispute" },
+    { slug: "dispute-resolution" },
     { slug: "advisory" },
   ];
 }

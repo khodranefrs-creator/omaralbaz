@@ -16,13 +16,10 @@ const socialLinks = [
   { name: "Twitter", url: SOCIAL.twitter },
 ];
 
-const serviceSlugs = [
-  "corporate",
-  "contracts",
-  "consultancy",
-  "dispute",
-  "advisory",
-] as const;
+const dictKeyMap: Record<string, string> = {
+  "corporate-law": "corporate",
+  "dispute-resolution": "dispute",
+};
 
 export function Footer({ dict, locale }: FooterProps) {
   const year = new Date().getFullYear();
@@ -94,16 +91,20 @@ export function Footer({ dict, locale }: FooterProps) {
               {dict.footer.servicesTitle}
             </h3>
             <ul className="space-y-3 text-sm">
-              {serviceSlugs.map((slug) => (
-                <li key={slug}>
-                  <Link
-                    href={`/${locale}/services/${slug === "corporate" ? "corporate-law" : slug === "dispute" ? "dispute-resolution" : slug}`}
-                    className="hover:text-gold-400 transition-smooth"
-                  >
-                    {dict.services[slug].title}
-                  </Link>
-                </li>
-              ))}
+              {SERVICES.map((service) => {
+                const dictKey = dictKeyMap[service.slug] ?? service.slug;
+                const svc = dict.services as unknown as Record<string, { title: string }>;
+                return (
+                  <li key={service.slug}>
+                    <Link
+                      href={`/${locale}/services/${service.slug}`}
+                      className="hover:text-gold-400 transition-smooth"
+                    >
+                      {svc[dictKey]?.title}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

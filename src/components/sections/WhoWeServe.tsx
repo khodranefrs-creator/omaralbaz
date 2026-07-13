@@ -1,12 +1,10 @@
 import type { ReactNode } from "react";
 import type { Dictionary } from "@/i18n/get-dictionary";
-import type { Locale } from "@/i18n/config";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 interface WhoWeServeProps {
   dict: Dictionary;
-  locale: Locale;
 }
 
 interface Sector {
@@ -15,7 +13,7 @@ interface Sector {
   icon: ReactNode;
 }
 
-export function WhoWeServe({ dict, locale }: WhoWeServeProps) {
+export function WhoWeServe({ dict }: WhoWeServeProps) {
   const sectors: Sector[] = [
     {
       title: dict.whoWeServe.corporations.title,

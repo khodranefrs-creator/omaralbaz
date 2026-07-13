@@ -59,8 +59,8 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       <Hero dict={dict} locale={locale} />
-      <TrustBar dict={dict} locale={locale} />
-      <WhoWeServe dict={dict} locale={locale} />
+      <TrustBar dict={dict} />
+      <WhoWeServe dict={dict} />
       <ServicesOverview dict={dict} locale={locale} />
       <WhyChooseUsTeaser dict={dict} locale={locale} />
       <LatestArticles dict={dict} locale={locale} articles={articles} />
