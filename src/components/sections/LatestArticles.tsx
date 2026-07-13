@@ -16,7 +16,7 @@ export function LatestArticles({ dict, locale, articles }: LatestArticlesProps) 
   const latestArticles = articles.slice(0, 3);
 
   return (
-    <section className="py-24 md:py-32 bg-warm-50">
+    <section className="section-premium bg-warm-50">
       <Container>
         <SectionHeading
           title={dict.home.articlesTitle}

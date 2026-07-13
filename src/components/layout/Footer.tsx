@@ -30,31 +30,33 @@ export function Footer({ dict, locale }: FooterProps) {
       <GoldDivider />
 
       <Container>
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div>
+        <div className="py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
+          {/* Brand column */}
+          <div className="lg:col-span-1">
             <Link href={`/${locale}`} className="inline-block mb-6">
               <Image
                 src="/images/omarlogo.png"
                 alt="Omar Al Baz Law Office & Legal Consultancy"
-                width={240}
-                height={72}
-                className="h-14 w-auto brightness-0 invert opacity-90"
+                width={300}
+                height={90}
+                className="h-16 w-auto brightness-0 invert opacity-90"
               />
             </Link>
-            <p className="text-sm text-warm-400 leading-relaxed">
+            <p className="text-sm text-warm-400 leading-relaxed mt-4">
               {dict.footer.description}
             </p>
           </div>
 
+          {/* Quick links */}
           <div>
-            <h3 className="text-white font-semibold mb-6">
+            <h3 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">
               {dict.footer.quickLinks}
             </h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
                   href={`/${locale}/about`}
-                  className="hover:text-gold-400 transition-smooth"
+                  className="text-warm-400 hover:text-gold-400 transition-smooth link-underline"
                 >
                   {dict.nav.about}
                 </Link>
@@ -62,7 +64,7 @@ export function Footer({ dict, locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/team`}
-                  className="hover:text-gold-400 transition-smooth"
+                  className="text-warm-400 hover:text-gold-400 transition-smooth link-underline"
                 >
                   {dict.nav.team}
                 </Link>
@@ -70,7 +72,7 @@ export function Footer({ dict, locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/why-choose-us`}
-                  className="hover:text-gold-400 transition-smooth"
+                  className="text-warm-400 hover:text-gold-400 transition-smooth link-underline"
                 >
                   {dict.nav.whyChooseUs}
                 </Link>
@@ -78,7 +80,7 @@ export function Footer({ dict, locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/articles`}
-                  className="hover:text-gold-400 transition-smooth"
+                  className="text-warm-400 hover:text-gold-400 transition-smooth link-underline"
                 >
                   {dict.nav.articles}
                 </Link>
@@ -86,19 +88,23 @@ export function Footer({ dict, locale }: FooterProps) {
             </ul>
           </div>
 
+          {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-6">
+            <h3 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">
               {dict.footer.servicesTitle}
             </h3>
             <ul className="space-y-3 text-sm">
               {SERVICES.map((service) => {
                 const dictKey = dictKeyMap[service.slug] ?? service.slug;
-                const svc = dict.services as unknown as Record<string, { title: string }>;
+                const svc = dict.services as unknown as Record<
+                  string,
+                  { title: string }
+                >;
                 return (
                   <li key={service.slug}>
                     <Link
                       href={`/${locale}/services/${service.slug}`}
-                      className="hover:text-gold-400 transition-smooth"
+                      className="text-warm-400 hover:text-gold-400 transition-smooth link-underline"
                     >
                       {svc[dictKey]?.title}
                     </Link>
@@ -108,37 +114,47 @@ export function Footer({ dict, locale }: FooterProps) {
             </ul>
           </div>
 
+          {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-6">
+            <h3 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">
               {dict.footer.contactTitle}
             </h3>
-            <address className="not-italic space-y-3 text-sm">
+            <address className="not-italic space-y-4 text-sm">
               <p className="flex items-start gap-3">
-                <svg viewBox="0 0 20 20" className="w-4 h-4 mt-0.5 flex-shrink-0 stroke-gold-500 fill-none stroke-[1.5]">
+                <svg
+                  viewBox="0 0 20 20"
+                  className="w-4 h-4 mt-0.5 flex-shrink-0 stroke-gold-500 fill-none stroke-[1.5]"
+                >
                   <path d="M10 2C6.13 2 3 5.13 3 9c0 5.25 7 9 7 9s7-3.75 7-9c0-3.87-3.13-7-7-7z" />
                   <circle cx="10" cy="9" r="2.5" />
                 </svg>
-                <span>{CONTACT.address[locale]}</span>
+                <span className="text-warm-400">{CONTACT.address[locale]}</span>
               </p>
               <p className="flex items-start gap-3">
-                <svg viewBox="0 0 20 20" className="w-4 h-4 mt-0.5 flex-shrink-0 stroke-gold-500 fill-none stroke-[1.5]">
+                <svg
+                  viewBox="0 0 20 20"
+                  className="w-4 h-4 mt-0.5 flex-shrink-0 stroke-gold-500 fill-none stroke-[1.5]"
+                >
                   <path d="M2 4l7 5 7-5" />
                   <rect x="2" y="4" width="16" height="12" rx="2" />
                 </svg>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="hover:text-gold-400 transition-smooth"
+                  className="text-warm-400 hover:text-gold-400 transition-smooth link-underline"
                 >
                   {CONTACT.email}
                 </a>
               </p>
               <p className="flex items-start gap-3">
-                <svg viewBox="0 0 20 20" className="w-4 h-4 mt-0.5 flex-shrink-0 stroke-gold-500 fill-none stroke-[1.5]">
+                <svg
+                  viewBox="0 0 20 20"
+                  className="w-4 h-4 mt-0.5 flex-shrink-0 stroke-gold-500 fill-none stroke-[1.5]"
+                >
                   <path d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .9.55l1.1 2.2a1 1 0 0 1-.2 1.1L7.8 8.4a11.05 11.05 0 0 0 4.8 4.8l1.55-1.28a1 1 0 0 1 1.1-.2l2.2 1.1a1 1 0 0 1 .55.9V15a2 2 0 0 1-2 2A13 13 0 0 1 3 5z" />
                 </svg>
                 <a
                   href={`tel:${CONTACT.phone}`}
-                  className="hover:text-gold-400 transition-smooth"
+                  className="text-warm-400 hover:text-gold-400 transition-smooth link-underline"
                   dir="ltr"
                 >
                   {CONTACT.phone}
@@ -153,14 +169,23 @@ export function Footer({ dict, locale }: FooterProps) {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center border border-warm-700 text-warm-400 hover:border-gold-500 hover:text-gold-400 transition-smooth"
+                  className="w-9 h-9 flex items-center justify-center border border-warm-700 text-warm-400 hover:border-gold-500 hover:text-gold-400 transition-smooth duration-200"
                   aria-label={item.name}
                 >
                   {item.name === "Instagram" && (
-                    <svg viewBox="0 0 20 20" className="w-4 h-4 stroke-current fill-none stroke-[1.5]">
+                    <svg
+                      viewBox="0 0 20 20"
+                      className="w-4 h-4 stroke-current fill-none stroke-[1.5]"
+                    >
                       <rect x="2" y="2" width="16" height="16" rx="5" />
                       <circle cx="10" cy="10" r="4" />
-                      <circle cx="14.5" cy="5.5" r="1" fill="currentColor" stroke="none" />
+                      <circle
+                        cx="14.5"
+                        cy="5.5"
+                        r="1"
+                        fill="currentColor"
+                        stroke="none"
+                      />
                     </svg>
                   )}
                   {item.name === "Facebook" && (
@@ -184,13 +209,13 @@ export function Footer({ dict, locale }: FooterProps) {
           <div className="flex gap-6">
             <Link
               href={`/${locale}/privacy`}
-              className="hover:text-gold-400 transition-smooth"
+              className="hover:text-gold-400 transition-smooth link-underline"
             >
               {dict.footer.privacyPolicy}
             </Link>
             <Link
               href={`/${locale}/terms`}
-              className="hover:text-gold-400 transition-smooth"
+              className="hover:text-gold-400 transition-smooth link-underline"
             >
               {dict.footer.termsOfUse}
             </Link>

@@ -29,7 +29,11 @@
     "experienceValue": "+15",
     "casesValue": "+500",
     "industriesValue": "+20",
-    "satisfactionValue": "99%"
+    "satisfactionValue": "99%",
+    "experienceDesc": "Years of hands-on expertise in the Saudi market",
+    "casesDesc": "Successful cases and satisfied clients",
+    "industriesDesc": "Distinct economic sectors served",
+    "satisfactionDesc": "Our client satisfaction rate"
   },
   "whoWeServe": {
     "title": "Who We Serve",
@@ -56,7 +60,12 @@
     "articlesSubtitle": "The latest legal analysis and articles to help you understand the Saudi legal landscape.",
     "ctaTitle": "Need Legal Consultation?",
     "ctaSubtitle": "Our team of qualified lawyers and consultants is ready to help you. Book your first consultation now.",
-    "ctaButton": "Book a Consultation"
+    "ctaButton": "Book a Consultation",
+    "trustItems": [
+      "Confidential handling",
+      "Fast response",
+      "Professional consultation"
+    ]
   },
   "about": {
     "title": "About Us",

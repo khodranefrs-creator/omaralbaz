@@ -20,7 +20,7 @@ const reasons = [
 
 export function WhyChooseUsTeaser({ dict, locale }: WhyChooseUsTeaserProps) {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="section-premium bg-white">
       <Container>
         <SectionHeading
           title={dict.whyChooseUs.title}
@@ -31,12 +31,12 @@ export function WhyChooseUsTeaser({ dict, locale }: WhyChooseUsTeaserProps) {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
           {reasons.map((reason) => (
             <div key={reason.num} className="group">
-              <div className="flex items-start gap-5">
-                <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-gold-500 text-gold-600 font-heading-en text-sm font-semibold transition-smooth group-hover:bg-gold-500 group-hover:text-navy-950">
+              <div className="flex items-start gap-6">
+                <span className="flex-shrink-0 w-12 h-12 flex items-center justify-center border-2 border-gold-400 text-gold-600 font-heading-en text-base font-bold transition-smooth group-hover:bg-gold-500 group-hover:text-navy-950 group-hover:border-gold-500">
                   {reason.num}
                 </span>
                 <div>
-                  <h3 className="font-heading-ar text-lg font-semibold text-navy-900 mb-2">
+                  <h3 className="font-heading-ar text-lg font-semibold text-navy-900 mb-3 leading-snug">
                     {dict.whyChooseUs[reason.titleKey]}
                   </h3>
                   <p className="text-warm-600 text-sm leading-relaxed">
@@ -51,10 +51,10 @@ export function WhyChooseUsTeaser({ dict, locale }: WhyChooseUsTeaserProps) {
         <div className="mt-16 text-center">
           <Link
             href={`/${locale}/why-choose-us`}
-            className="inline-flex items-center gap-2 text-gold-600 font-medium hover:text-gold-500 transition-smooth"
+            className="inline-flex items-center gap-2 text-gold-600 font-medium hover:text-gold-500 transition-smooth link-underline"
           >
-            <span className="rtl:rotate-180">&#8594;</span>
             <span>{dict.whyChooseUs.methodTitle}</span>
+            <span className="rtl:rotate-180 transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
           </Link>
         </div>
       </Container>

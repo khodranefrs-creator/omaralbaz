@@ -16,13 +16,13 @@ export default function SectionHeading({
   return (
     <div
       className={clsx(
-        "mb-12",
+        "mb-14",
         align === "center" ? "text-center" : "text-start"
       )}
     >
       <h2
         className={clsx(
-          "font-heading-ar text-3xl md:text-4xl font-semibold tracking-tight",
+          "font-heading-ar text-3xl md:text-4xl font-semibold tracking-tight leading-tight",
           light ? "text-white" : "text-navy-900"
         )}
       >
@@ -30,16 +30,16 @@ export default function SectionHeading({
       </h2>
       <div
         className={clsx(
-          "mt-4 h-0.5 w-12 bg-gold-400",
+          "mt-5 h-[2px] w-12 bg-gradient-to-r from-gold-500 to-gold-300",
           align === "center" && "mx-auto"
         )}
       />
       {subtitle && (
         <p
           className={clsx(
-            "mt-5 text-lg max-w-2xl leading-relaxed",
+            "mt-6 text-lg max-w-2xl leading-relaxed",
             align === "center" && "mx-auto",
-            light ? "text-warm-300" : "text-warm-600"
+            light ? "text-warm-300" : "text-warm-500"
           )}
         >
           {subtitle}

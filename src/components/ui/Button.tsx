@@ -17,11 +17,14 @@ interface ButtonProps {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-gold-400 text-white hover:bg-gold-500 active:bg-gold-600",
-  secondary: "bg-navy-900 text-white hover:bg-navy-800 active:bg-navy-700",
+  primary:
+    "bg-gold-500 text-white hover:bg-gold-400 active:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 shadow-sm hover:shadow-md active:shadow-none",
+  secondary:
+    "bg-navy-900 text-white hover:bg-navy-800 active:bg-navy-700 focus-visible:ring-2 focus-visible:ring-navy-400 focus-visible:ring-offset-2 shadow-sm hover:shadow-md active:shadow-none",
   outline:
-    "border border-gold-400 text-gold-600 hover:bg-gold-50 active:bg-gold-100",
-  ghost: "text-warm-700 hover:text-gold-600 active:text-gold-700",
+    "border border-gold-400 text-gold-600 hover:bg-gold-50 active:bg-gold-100 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2",
+  ghost:
+    "text-warm-700 hover:text-gold-600 active:text-gold-700 hover:bg-warm-50",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -41,7 +44,7 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const classes = clsx(
-    "inline-flex items-center justify-center font-medium tracking-wide rounded-sm transition-smooth",
+    "inline-flex items-center justify-center font-medium tracking-wide transition-smooth duration-200",
     "disabled:opacity-50 disabled:cursor-not-allowed",
     variantStyles[variant],
     sizeStyles[size],

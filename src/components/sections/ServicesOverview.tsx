@@ -25,7 +25,7 @@ const serviceData: Array<{
 
 export function ServicesOverview({ dict, locale }: ServicesOverviewProps) {
   return (
-    <section className="py-24 md:py-32 bg-warm-50">
+    <section className="section-premium bg-warm-50">
       <Container>
         <SectionHeading
           title={dict.services.title}

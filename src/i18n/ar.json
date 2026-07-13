@@ -29,7 +29,11 @@
     "experienceValue": "+١٥",
     "casesValue": "+٥٠٠",
     "industriesValue": "+٢٠",
-    "satisfactionValue": "٩٩٪"
+    "satisfactionValue": "٩٩٪",
+    "experienceDesc": "خبرة ميدانية في السوق السعودي",
+    "casesDesc": "قضية ناجحة وعميل سعيد",
+    "industriesDesc": "قطاع اقتصادي مختلف",
+    "satisfactionDesc": "نسبة رضا عملائنا"
   },
   "whoWeServe": {
     "title": "من نخدم",
@@ -56,7 +60,12 @@
     "articlesSubtitle": "أحدث التحليلات والمقالات لمساعدتك على فهم المشهد القانوني في السعودية.",
     "ctaTitle": "تحتاج استشارة قانونية؟",
     "ctaSubtitle": "فريقنا من المحامين والاستشاريين المؤهلين جاهز لمساعدتك. احجز استشارتك الأولى الآن.",
-    "ctaButton": "احجز استشارة"
+    "ctaButton": "احجز استشارة",
+    "trustItems": [
+      "سرية تامة",
+      "استجابة سريعة",
+      "استشارة قانونية احترافية"
+    ]
   },
   "about": {
     "title": "من نحن",

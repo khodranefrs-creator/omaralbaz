@@ -40,18 +40,16 @@ export function Header({ dict, locale }: HeaderProps) {
   const switchPath = pathname.replace(`/${locale}`, `/${otherLocale}`);
 
   return (
-    <header
-      className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-smooth"
-    >
+    <header className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-smooth">
       <Container>
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-24 md:h-28">
           <Link href={`/${locale}`} className="flex-shrink-0">
             <Image
               src="/images/omarlogo.png"
               alt="Omar Al Baz Law Office & Legal Consultancy"
-              width={240}
-              height={72}
-              className="h-14 w-auto"
+              width={300}
+              height={90}
+              className="h-16 w-auto md:h-20"
               priority
               fetchPriority="high"
             />
@@ -60,7 +58,9 @@ export function Header({ dict, locale }: HeaderProps) {
           <nav className="hidden lg:flex items-center gap-1">
             {navigation.map((item) => {
               const fullHref = `/${locale}${item.href}`;
-              const isActive = pathname === fullHref || (item.href !== "/" && pathname.startsWith(fullHref));
+              const isActive =
+                pathname === fullHref ||
+                (item.href !== "/" && pathname.startsWith(fullHref));
 
               if (item.key === "services") {
                 return (
@@ -75,7 +75,7 @@ export function Header({ dict, locale }: HeaderProps) {
                       className={clsx(
                         "px-4 py-2 text-sm font-medium transition-smooth",
                         isActive
-                          ? "text-gold-600"
+                          ? "text-gold-600 nav-active-indicator"
                           : "text-warm-700 hover:text-gold-600"
                       )}
                     >
@@ -83,12 +83,12 @@ export function Header({ dict, locale }: HeaderProps) {
                     </Link>
 
                     {isServicesOpen && (
-                      <div className="absolute top-full left-0 w-64 bg-white border border-warm-200 shadow-lg py-2 z-50">
+                      <div className="absolute top-full left-0 w-72 bg-white border border-warm-200 shadow-xl py-2 z-50">
                         {serviceLinks.map((service) => (
                           <Link
                             key={service.key}
                             href={`/${locale}${service.href}`}
-                            className="block px-4 py-2.5 text-sm text-warm-700 hover:bg-warm-50 hover:text-gold-600 transition-smooth"
+                            className="block px-5 py-3 text-sm text-warm-700 hover:bg-gold-50 hover:text-gold-600 transition-smooth"
                           >
                             {dict.services[service.key].title}
                           </Link>
@@ -106,7 +106,7 @@ export function Header({ dict, locale }: HeaderProps) {
                   className={clsx(
                     "px-4 py-2 text-sm font-medium transition-smooth",
                     isActive
-                      ? "text-gold-600"
+                      ? "text-gold-600 nav-active-indicator"
                       : "text-warm-700 hover:text-gold-600"
                   )}
                 >
@@ -119,7 +119,7 @@ export function Header({ dict, locale }: HeaderProps) {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href={`/${locale}/contact`}
-              className="inline-flex items-center px-5 py-2.5 bg-gold-500 text-navy-950 text-sm font-semibold hover:bg-gold-400 transition-smooth"
+              className="inline-flex items-center px-5 py-2.5 bg-gold-500 text-navy-950 text-sm font-semibold hover:bg-gold-400 active:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 transition-smooth"
             >
               {dict.nav.bookConsultation}
             </Link>
@@ -148,12 +148,12 @@ export function Header({ dict, locale }: HeaderProps) {
 
           <button
             type="button"
-            className="lg:hidden p-2 text-warm-700"
+            className="lg:hidden p-2 text-warm-700 hover:text-gold-600 transition-smooth"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             <svg
-              className="w-6 h-6"
+              className="w-7 h-7"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -162,14 +162,14 @@ export function Header({ dict, locale }: HeaderProps) {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={1.5}
                   d="M6 18L18 6M6 6l12 12"
                 />
               ) : (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={1.5}
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               )}
@@ -206,7 +206,7 @@ export function Header({ dict, locale }: HeaderProps) {
               <div className="pt-4 border-t border-warm-200 space-y-2">
                 <Link
                   href={`/${locale}/contact`}
-                  className="block text-center px-4 py-3 bg-gold-500 text-navy-950 text-sm font-semibold hover:bg-gold-400 transition-smooth"
+                  className="block text-center px-4 py-3 bg-gold-500 text-navy-950 text-sm font-semibold hover:bg-gold-400 active:bg-gold-600 transition-smooth"
                   onClick={() => setIsOpen(false)}
                 >
                   {dict.nav.bookConsultation}

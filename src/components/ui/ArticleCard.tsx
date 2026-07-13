@@ -26,7 +26,7 @@ export default function ArticleCard({
       href={`/${locale}/articles/${slug}`}
       className={clsx(
         "group block border border-warm-200 bg-white overflow-hidden",
-        "hover:border-gold-400 hover:shadow-lg transition-smooth"
+        "hover-lift hover:border-gold-400 transition-smooth"
       )}
     >
       <div className="p-8">
@@ -43,7 +43,7 @@ export default function ArticleCard({
           <time className="text-xs text-warm-500">{date}</time>
         </div>
 
-        <h3 className="font-heading-ar text-xl font-semibold text-navy-900 mb-3 leading-snug group-hover:text-gold-700 transition-smooth">
+        <h3 className="font-heading-ar text-xl font-semibold text-navy-900 mb-3 leading-snug group-hover:text-gold-700 transition-smooth duration-200">
           {title}
         </h3>
 
@@ -58,11 +58,11 @@ export default function ArticleCard({
           <span
             className={clsx(
               "inline-flex items-center gap-1 text-sm font-medium text-gold-600",
-              "group-hover:text-gold-500 transition-smooth",
+              "group-hover:text-gold-500 transition-smooth duration-200",
               !author && "ms-auto"
             )}
           >
-            <span className="rtl:rotate-180">&#8594;</span>
+            <span className="rtl:rotate-180 transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
           </span>
         </div>
       </div>
