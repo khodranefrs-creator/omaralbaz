@@ -149,7 +149,7 @@ export function Header({ dict, locale }: HeaderProps) {
 
           <button
             type="button"
-            className="lg:hidden p-2 text-warm-900 hover:text-gold-700 transition-smooth"
+            className="lg:hidden p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-warm-900 hover:text-gold-700 transition-smooth"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -182,9 +182,9 @@ export function Header({ dict, locale }: HeaderProps) {
       </Container>
 
       {isOpen && (
-        <div className="lg:hidden border-t border-warm-200 bg-white">
+        <div className="lg:hidden border-t border-warm-200 bg-white animate-slide-down">
           <Container>
-            <div className="py-4 space-y-1">
+            <div className="py-4 space-y-1.5">
               {navigation.map((item) => {
                 const fullHref = `/${locale}${item.href}`;
                 const isActive = pathname === fullHref;

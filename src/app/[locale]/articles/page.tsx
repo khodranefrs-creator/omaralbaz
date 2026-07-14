@@ -117,6 +117,7 @@ export default async function ArticlesPage({
             title={dict.articles.title}
             subtitle={dict.articles.subtitle}
             light
+            level={1}
           />
         </Container>
       </section>

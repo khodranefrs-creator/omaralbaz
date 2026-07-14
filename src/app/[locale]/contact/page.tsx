@@ -56,6 +56,7 @@ export default async function ContactPage({
             title={dict.contact.title}
             subtitle={dict.contact.subtitle}
             light
+            level={1}
           />
         </Container>
       </section>
@@ -63,7 +64,7 @@ export default async function ContactPage({
       <section className="bg-white py-16">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-            <div className="lg:col-span-3 space-y-12">
+            <div className="lg:col-span-3 space-y-10 lg:space-y-12">
               <ContactForm dict={dict} locale={locale} />
 
               <GoldDivider maxWidth="4rem" />

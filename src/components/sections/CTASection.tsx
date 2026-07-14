@@ -41,6 +41,7 @@ export function CTASection({ dict, locale }: CTASectionProps) {
                   <svg
                     viewBox="0 0 16 16"
                     className="w-3.5 h-3.5 text-gold-500 fill-none stroke-current stroke-[2]"
+                    aria-hidden="true"
                   >
                     <path d="M3 8.5l3.5 3.5L13 4.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

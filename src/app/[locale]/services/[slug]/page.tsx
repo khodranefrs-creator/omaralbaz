@@ -92,6 +92,7 @@ export default async function ServicePage({
           <SectionHeading
             title={serviceData.title}
             light
+            level={1}
           />
         </Container>
       </section>

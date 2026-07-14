@@ -60,6 +60,7 @@ export default async function AboutPage({
             title={dict.about.title}
             subtitle={dict.about.subtitle}
             light
+            level={1}
           />
         </Container>
       </section>

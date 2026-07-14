@@ -110,6 +110,7 @@ export default async function ServicesPage({
             title={dict.services.title}
             subtitle={dict.services.subtitle}
             light
+            level={1}
           />
         </Container>
       </section>

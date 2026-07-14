@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   align?: "center" | "left";
   light?: boolean;
+  level?: 1 | 2;
 }
 
 export default function SectionHeading({
@@ -12,7 +13,10 @@ export default function SectionHeading({
   subtitle,
   align = "center",
   light = false,
+  level = 2,
 }: SectionHeadingProps) {
+  const Tag = level === 1 ? "h1" : "h2";
+
   return (
     <div
       className={clsx(
@@ -20,14 +24,14 @@ export default function SectionHeading({
         align === "center" ? "text-center" : "text-start"
       )}
     >
-      <h2
+      <Tag
         className={clsx(
           "font-heading-ar text-3xl md:text-4xl font-semibold tracking-tight leading-tight",
           light ? "text-white" : "text-navy-900"
         )}
       >
         {title}
-      </h2>
+      </Tag>
       <div
         className={clsx(
           "mt-5 h-[2px] w-12 bg-gradient-to-r from-gold-500 to-gold-300",

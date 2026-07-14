@@ -28,7 +28,7 @@ export function WhyChooseUsTeaser({ dict, locale }: WhyChooseUsTeaserProps) {
           align="center"
         />
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 md:gap-y-16">
           {reasons.map((reason) => (
             <div key={reason.num} className="group">
               <div className="flex items-start gap-6">

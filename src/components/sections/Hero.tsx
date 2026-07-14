@@ -62,13 +62,13 @@ export function Hero({ dict, locale }: HeroProps) {
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <Link
               href={`/${locale}/contact`}
-              className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-navy-950 font-semibold hover:bg-gold-400 active:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 transition-smooth text-lg"
+              className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 bg-gold-500 text-navy-950 font-semibold hover:bg-gold-400 active:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 transition-smooth text-base sm:text-lg"
             >
               {dict.hero.cta}
             </Link>
             <Link
               href={`/${locale}/services`}
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-warm-400/30 text-white font-semibold hover:border-gold-400 hover:text-gold-400 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 transition-smooth text-lg"
+              className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 border-2 border-warm-400/30 text-white font-semibold hover:border-gold-400 hover:text-gold-400 focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 transition-smooth text-base sm:text-lg"
             >
               {dict.hero.ctaSecondary}
             </Link>

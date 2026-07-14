@@ -32,7 +32,7 @@ export default async function PrivacyPage({
     <>
       <section className="bg-navy-900 py-20">
         <Container>
-          <SectionHeading title={dict.footer.privacyPolicy} light />
+          <SectionHeading title={dict.footer.privacyPolicy} light level={1} />
         </Container>
       </section>
       <section className="bg-white section-premium">

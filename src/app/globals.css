@@ -66,6 +66,9 @@ html {
     transform: none;
     box-shadow: none;
   }
+  .animate-slide-down {
+    animation: none;
+  }
 }
 
 body {
@@ -215,4 +218,20 @@ h1 {
 
 [dir="ltr"] {
   text-align: left;
+}
+
+/* ─── Mobile menu slide-down animation ─── */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.2s ease-out;
 }

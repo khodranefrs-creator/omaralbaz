@@ -69,6 +69,7 @@ export default async function WhyChooseUsPage({
             title={dict.whyChooseUs.title}
             subtitle={dict.whyChooseUs.subtitle}
             light
+            level={1}
           />
         </Container>
       </section>

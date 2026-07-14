@@ -32,7 +32,7 @@ export default async function TermsPage({
     <>
       <section className="bg-navy-900 py-20">
         <Container>
-          <SectionHeading title={dict.footer.termsOfUse} light />
+          <SectionHeading title={dict.footer.termsOfUse} light level={1} />
         </Container>
       </section>
       <section className="bg-white section-premium">

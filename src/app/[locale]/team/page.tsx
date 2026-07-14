@@ -54,6 +54,7 @@ export default async function TeamPage({
             title={dict.team.title}
             subtitle={dict.team.subtitle}
             light
+            level={1}
           />
         </Container>
       </section>

@@ -172,7 +172,7 @@ export function Footer({ dict, locale }: FooterProps) {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                    className="w-11 h-11 flex items-center justify-center border border-warm-700 text-warm-400 hover:border-gold-500 hover:text-gold-400 transition-smooth duration-200"
+                    className="w-12 h-12 flex items-center justify-center border border-warm-700 text-warm-400 hover:border-gold-500 hover:text-gold-400 transition-smooth duration-200"
                   aria-label={item.name}
                 >
                   {item.name === "Instagram" && (
