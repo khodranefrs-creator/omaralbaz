@@ -4,7 +4,7 @@ import { isValidLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Button from "@/components/ui/Button";
+import { CTASection } from "@/components/sections/CTASection";
 
 export async function generateMetadata({
   params,
@@ -21,6 +21,14 @@ export async function generateMetadata({
 
   return {
     title: dict.whyChooseUs.title,
+    description: dict.whyChooseUs.subtitle,
+    alternates: {
+      canonical: `/why-choose-us`,
+      languages: {
+        ar: `/ar/why-choose-us`,
+        en: `/en/why-choose-us`,
+      },
+    },
   };
 }
 
@@ -112,24 +120,7 @@ export default async function WhyChooseUsPage({
         </Container>
       </section>
 
-      <section className="bg-navy-900 py-20">
-        <Container>
-          <div className="text-center">
-            <h2 className="font-heading-ar text-3xl md:text-4xl font-semibold text-white mb-4">
-              {dict.home.ctaTitle}
-            </h2>
-            <div className="mt-4 h-0.5 w-12 bg-gold-400 mx-auto" />
-            <p className="mt-5 text-lg text-warm-300 max-w-2xl mx-auto leading-relaxed">
-              {dict.home.ctaSubtitle}
-            </p>
-            <div className="mt-8">
-              <Button variant="primary" size="lg" href={`/${locale}/contact`}>
-                {dict.home.ctaButton}
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <CTASection dict={dict} locale={locale} />
     </>
   );
 }

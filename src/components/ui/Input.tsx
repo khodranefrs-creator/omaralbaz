@@ -40,6 +40,8 @@ export default function Input({
         placeholder={placeholder}
         required={required}
         dir={dir}
+        aria-describedby={error ? `${id}-error` : undefined}
+        aria-invalid={error ? true : undefined}
         className={clsx(
           "w-full rounded-sm border px-4 py-3 text-base",
           "bg-white text-warm-900 placeholder:text-warm-400",
@@ -50,7 +52,7 @@ export default function Input({
         )}
       />
       {error && (
-        <p className="mt-1.5 text-sm text-red-600">{error}</p>
+        <p id={`${id}-error`} className="mt-1.5 text-sm text-red-600">{error}</p>
       )}
     </div>
   );

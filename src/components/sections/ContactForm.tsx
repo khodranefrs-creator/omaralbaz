@@ -64,13 +64,13 @@ export default function ContactForm({ dict, locale }: ContactFormProps) {
       </h3>
 
       {status === "success" && (
-        <div className="mb-6 rounded-sm bg-green-50 border border-green-200 px-5 py-4 text-green-700">
+        <div role="status" aria-live="polite" className="mb-6 rounded-sm bg-green-50 border border-green-200 px-5 py-4 text-green-700">
           {dict.contact.success}
         </div>
       )}
 
       {status === "error" && (
-        <div className="mb-6 rounded-sm bg-red-50 border border-red-200 px-5 py-4 text-red-700">
+        <div role="alert" aria-live="assertive" className="mb-6 rounded-sm bg-red-50 border border-red-200 px-5 py-4 text-red-700">
           {errorMsg}
         </div>
       )}

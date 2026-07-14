@@ -16,7 +16,7 @@ export function TrustBar({ dict }: TrustBarProps) {
   return (
     <section className="bg-navy-900 py-16 md:py-20">
       <Container>
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-8">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
           {items.map((item) => (
             <div key={item.labelKey} className="text-center">
               <p className="text-4xl md:text-5xl font-bold text-gold-400 leading-none tracking-tight">

@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import GoldDivider from "@/components/ui/GoldDivider";
 import Button from "@/components/ui/Button";
+import { CTASection } from "@/components/sections/CTASection";
 
 const SERVICE_SLUGS = ["corporate", "contracts", "consultancy", "dispute", "advisory"] as const;
 
@@ -40,6 +41,14 @@ export async function generateMetadata({
 
   return {
     title: dict.services.title,
+    description: dict.services.subtitle,
+    alternates: {
+      canonical: `/services`,
+      languages: {
+        ar: `/ar/services`,
+        en: `/en/services`,
+      },
+    },
   };
 }
 
@@ -130,24 +139,7 @@ export default async function ServicesPage({
         </div>
       ))}
 
-      <section className="bg-navy-900 py-20">
-        <Container>
-          <div className="text-center">
-            <h2 className="font-heading-ar text-3xl md:text-4xl font-semibold text-white mb-4">
-              {dict.home.ctaTitle}
-            </h2>
-            <div className="mt-4 h-0.5 w-12 bg-gold-400 mx-auto" />
-            <p className="mt-5 text-lg text-warm-300 max-w-2xl mx-auto leading-relaxed">
-              {dict.home.ctaSubtitle}
-            </p>
-            <div className="mt-8">
-              <Button variant="primary" size="lg" href={`/${locale}/contact`}>
-                {dict.home.ctaButton}
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <CTASection dict={dict} locale={locale} />
     </>
   );
 }

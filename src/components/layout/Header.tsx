@@ -136,6 +136,7 @@ export function Header({ dict, locale }: HeaderProps) {
               <svg
                 viewBox="0 0 20 20"
                 className="w-4 h-4 stroke-current fill-none stroke-[1.5]"
+                aria-hidden="true"
               >
                 <circle cx="10" cy="10" r="8" />
                 <path d="M2 10h16" />
@@ -150,6 +151,7 @@ export function Header({ dict, locale }: HeaderProps) {
             type="button"
             className="lg:hidden p-2 text-warm-900 hover:text-gold-700 transition-smooth"
             onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             <svg
@@ -157,6 +159,7 @@ export function Header({ dict, locale }: HeaderProps) {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               {isOpen ? (
                 <path
@@ -220,6 +223,7 @@ export function Header({ dict, locale }: HeaderProps) {
                   <svg
                     viewBox="0 0 20 20"
                     className="w-4 h-4 stroke-current fill-none stroke-[1.5]"
+                    aria-hidden="true"
                   >
                     <circle cx="10" cy="10" r="8" />
                     <path d="M2 10h16" />

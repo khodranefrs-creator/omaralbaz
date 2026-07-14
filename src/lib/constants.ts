@@ -1,5 +1,3 @@
-export const SITE_NAME = "Omar Al Baz Law Office";
-export const SITE_NAME_AR = "مكتب عمر الباز للمحاماة والاستشارات القانونية";
 export const SITE_URL = "https://omaralbaz.com";
 
 export const CONTACT = {

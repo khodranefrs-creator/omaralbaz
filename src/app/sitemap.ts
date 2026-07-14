@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL, SERVICES } from "@/lib/constants";
 import { locales } from "@/i18n/config";
 
-const pages = ["", "about", "services", "team", "why-choose-us", "articles", "contact"];
+const pages = ["", "about", "services", "team", "why-choose-us", "articles", "contact", "privacy", "terms"];
 
 const articleSlugs = [
   "saudi-companies-law-amendments",

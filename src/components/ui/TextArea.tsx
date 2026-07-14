@@ -34,6 +34,8 @@ export default function TextArea({
         placeholder={placeholder}
         required={required}
         rows={rows}
+        aria-describedby={error ? `${id}-error` : undefined}
+        aria-invalid={error ? true : undefined}
         className={clsx(
           "w-full rounded-sm border px-4 py-3 text-base resize-y",
           "bg-white text-warm-900 placeholder:text-warm-400",
@@ -44,7 +46,7 @@ export default function TextArea({
         )}
       />
       {error && (
-        <p className="mt-1.5 text-sm text-red-600">{error}</p>
+        <p id={`${id}-error`} className="mt-1.5 text-sm text-red-600">{error}</p>
       )}
     </div>
   );

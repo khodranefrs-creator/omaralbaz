@@ -41,6 +41,8 @@ export default function Select({
         name={name}
         required={required}
         defaultValue=""
+        aria-describedby={error ? `${id}-error` : undefined}
+        aria-invalid={error ? true : undefined}
         className={clsx(
           "w-full rounded-sm border px-4 py-3 text-base appearance-none",
           "bg-white text-warm-900",
@@ -63,7 +65,7 @@ export default function Select({
         ))}
       </select>
       {error && (
-        <p className="mt-1.5 text-sm text-red-600">{error}</p>
+        <p id={`${id}-error`} className="mt-1.5 text-sm text-red-600">{error}</p>
       )}
     </div>
   );

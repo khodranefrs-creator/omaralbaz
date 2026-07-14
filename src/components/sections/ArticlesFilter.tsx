@@ -37,6 +37,7 @@ export default function ArticlesFilter({
             <button
               key={key}
               onClick={() => setActiveFilter(key)}
+              aria-pressed={activeFilter === key}
               className={`px-5 py-2.5 text-sm font-medium rounded-sm transition-smooth ${
                 activeFilter === key
                   ? "bg-gold-500 text-white"

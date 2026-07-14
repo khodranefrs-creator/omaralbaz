@@ -27,11 +27,3 @@ export interface Article {
   slug: string;
 }
 
-export interface TeamMember {
-  id: string;
-  nameKey: string;
-  roleKey: string;
-  specializationKey: string;
-  bioKey: string;
-  image?: string;
-}

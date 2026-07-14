@@ -25,6 +25,13 @@ export async function generateMetadata({
   return {
     title: dict.contact.title,
     description: dict.contact.subtitle,
+    alternates: {
+      canonical: `/contact`,
+      languages: {
+        ar: `/ar/contact`,
+        en: `/en/contact`,
+      },
+    },
   };
 }
 

@@ -16,28 +16,28 @@ import "../globals.css";
 const notoNaskhArabic = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   variable: "--font-heading-ar",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
 const notoSansArabic = Noto_Sans_Arabic({
   subsets: ["arabic"],
   variable: "--font-body-ar",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading-en",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body-en",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -117,8 +117,14 @@ export default async function LocaleLayout({
       className={`${notoNaskhArabic.variable} ${notoSansArabic.variable} ${playfairDisplay.variable} ${inter.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-white text-warm-900 antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:bg-gold-500 focus:text-navy-950 focus:px-4 focus:py-2 focus:font-semibold focus:outline-none"
+        >
+          Skip to content
+        </a>
         <Header dict={dict} locale={locale} />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer dict={dict} locale={locale} />
         <script
           type="application/ld+json"

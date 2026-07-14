@@ -56,6 +56,14 @@ export async function generateMetadata({
 
   return {
     title: serviceData.title,
+    description: serviceData.description,
+    alternates: {
+      canonical: `/services/${slug}`,
+      languages: {
+        ar: `/ar/services/${slug}`,
+        en: `/en/services/${slug}`,
+      },
+    },
   };
 }
 

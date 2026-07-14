@@ -86,6 +86,13 @@ export async function generateMetadata({
   return {
     title: dict.articles.title,
     description: dict.articles.subtitle,
+    alternates: {
+      canonical: `/articles`,
+      languages: {
+        ar: `/ar/articles`,
+        en: `/en/articles`,
+      },
+    },
   };
 }
 

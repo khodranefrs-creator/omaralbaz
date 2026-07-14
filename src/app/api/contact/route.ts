@@ -1,23 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import type { ContactFormData } from "@/types";
+import { isRateLimited, recordSubmission, getClientIp } from "@/lib/rate-limit";
 
-const submissions = new Map<string, number[]>();
-const RATE_LIMIT = 3;
-const RATE_WINDOW = 60 * 60 * 1000;
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const times = submissions.get(ip) || [];
-  const recent = times.filter((t) => now - t < RATE_WINDOW);
-  submissions.set(ip, recent);
-  return recent.length >= RATE_LIMIT;
-}
+const MAX_LENGTHS = {
+  name: 100,
+  email: 254,
+  phone: 20,
+  subject: 200,
+  message: 5000,
+};
 
 export async function POST(request: NextRequest) {
-  const ip =
-    request.headers.get("x-forwarded-for") ||
-    request.headers.get("x-real-ip") ||
-    "unknown";
+  const ip = getClientIp(request);
 
   if (isRateLimited(ip)) {
     return NextResponse.json(
@@ -38,22 +32,24 @@ export async function POST(request: NextRequest) {
 
     const errors: string[] = [];
     if (!name || name.trim().length < 2) errors.push("Name is required");
+    if (name && name.length > MAX_LENGTHS.name) errors.push("Name is too long");
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       errors.push("Valid email is required");
+    if (email && email.length > MAX_LENGTHS.email) errors.push("Email is too long");
+    if (phone && phone.length > MAX_LENGTHS.phone) errors.push("Phone is too long");
     if (!subject || subject.trim().length < 2)
       errors.push("Subject is required");
+    if (subject && subject.length > MAX_LENGTHS.subject) errors.push("Subject is too long");
     if (!message || message.trim().length < 10)
       errors.push("Message must be at least 10 characters");
+    if (message && message.length > MAX_LENGTHS.message)
+      errors.push("Message is too long");
 
     if (errors.length > 0) {
       return NextResponse.json({ error: errors.join(", ") }, { status: 400 });
     }
 
-    const times = submissions.get(ip) || [];
-    times.push(Date.now());
-    submissions.set(ip, times);
-
-    console.log("Contact form submission:", { name, email, phone, subject, message });
+    recordSubmission(ip);
 
     return NextResponse.json({ success: true });
   } catch {
