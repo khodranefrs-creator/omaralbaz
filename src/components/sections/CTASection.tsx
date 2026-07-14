@@ -33,9 +33,9 @@ export function CTASection({ dict, locale }: CTASectionProps) {
 
           {trustItems && trustItems.length > 0 && (
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-              {trustItems.map((item: string, i: number) => (
+              {trustItems.map((item: string) => (
                 <span
-                  key={i}
+                  key={item}
                   className="inline-flex items-center gap-1.5 text-xs text-warm-400"
                 >
                   <svg

@@ -115,8 +115,8 @@ export default async function ServicePage({
               {serviceData.whenTitle}
             </h2>
             <ul className="space-y-4">
-              {serviceData.whenItems.map((item: string, index: number) => (
-                <li key={index} className="flex items-start gap-4">
+              {serviceData.whenItems.map((item: string) => (
+                <li key={item} className="flex items-start gap-4">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gold-400" />
                   <span className="text-warm-700 leading-relaxed text-lg">{item}</span>
                 </li>

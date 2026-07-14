@@ -59,9 +59,9 @@ export function WhoWeServe({ dict }: WhoWeServeProps) {
         />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {sectors.map((sector, idx) => (
+          {sectors.map((sector) => (
             <div
-              key={idx}
+              key={sector.title}
               className="group border border-warm-800/40 p-8 md:p-12 text-center hover-lift hover:border-gold-500/50 transition-smooth"
             >
               <div className="flex justify-center mb-7 group-hover:scale-110 transition-smooth duration-200">

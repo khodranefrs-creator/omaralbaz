@@ -113,9 +113,9 @@ export default async function AboutPage({
         <Container>
           <SectionHeading title={dict.about.valuesTitle} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value) => (
               <div
-                key={index}
+                key={value.title}
                 className="border-t-2 border-t-gold-600 bg-white border border-warm-200 p-8"
               >
                 <h4 className="font-heading-ar text-xl font-semibold text-navy-900 mb-3">
